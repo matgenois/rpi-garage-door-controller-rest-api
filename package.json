@@ -1,0 +1,32 @@
+{
+  "name": "node-garage-opener",
+  "version": "1.0.0",
+  "description": "A REST API garage door controller for Raspberry PI",
+  "scripts": {
+    "test": "echo \"No tests specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/matgenois/rpi-garage-door-controller-rest-api"
+  },
+  "keywords": [
+    "RESTful",
+    "API",
+    "Raspberry",
+    "rpi",
+    "gpio",
+    "garage",
+    "door",
+    "opener",
+    "controller"
+  ],
+  "author": "Mathieu Genois",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3",
+    "nodemon": "^1.11.0",
+    "rpi-gpio": "0.8.1",
+    "rpio": "^0.9.16"
+  }
+}
