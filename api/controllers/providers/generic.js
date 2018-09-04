@@ -3,8 +3,10 @@ var rpio = require ("rpio");
 
 const SENSOR_GPIO_ID = 10;
 const RELAY_GPIO_ID = 7;
+const RELAY_SAFETY_GPIO_ID = 8;
 
 rpio.open(RELAY_GPIO_ID, rpio.INPUT, rpio.PULL_DOWN);
+rpio.open(RELAY_SAFETY_GPIO_ID, rpio.INPUT, rpio.PULL_DOWN);
 
 exports.readState = function () {
     rpio.open(SENSOR_GPIO_ID, rpio.INPUT);
