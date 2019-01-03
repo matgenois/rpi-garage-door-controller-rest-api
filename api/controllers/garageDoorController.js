@@ -1,6 +1,6 @@
 ﻿'use strict';
 
-var garageDoorProvider = require('providers/generic.js');
+var garageDoorProvider = require('./providers/generic.js');
 
 exports.readState = function (req, res) {
     console.log('readState');

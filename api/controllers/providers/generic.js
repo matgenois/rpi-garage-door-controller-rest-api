@@ -3,7 +3,7 @@ var rpio = require ("rpio");
 
 const SENSOR_GPIO_ID = 10;
 const RELAY_GPIO_ID = 7;
-const RELAY_SAFETY_GPIO_ID = 8;
+const RELAY_SAFETY_GPIO_ID = 11;
 
 rpio.open(RELAY_GPIO_ID, rpio.INPUT, rpio.PULL_DOWN);
 rpio.open(RELAY_SAFETY_GPIO_ID, rpio.INPUT, rpio.PULL_DOWN);
@@ -16,7 +16,7 @@ exports.readState = function () {
 };
 
 exports.toggle = function () {
-  var state = readDoorState();
+  var state = this.readState();
   console.log('Current GPIO state is : ', state);
 
   rpio.open(RELAY_GPIO_ID, rpio.OUTPUT, rpio.HIGH);
